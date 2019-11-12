@@ -1,0 +1,35 @@
+body {
+  background-color: #EDEEF0;
+}
+
+.appWrapper {
+  display: grid;
+
+  width: 1200px;
+  margin: 0 auto;
+
+  grid-template-areas: 
+  "h h"
+  "n c";
+
+  grid-template-rows: 60px 1fr;
+  grid-template-columns: 2fr 10fr;
+  /* grid-gap: 10px; */
+
+  background-color: white;
+}
+
+.content {
+  grid-area: c;
+  border: 3px solid #39603C;
+  margin-top: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+}
+
+.wrapper {
+  width: 95%;
+  margin: 0 auto;
+  margin-top: 5px;
+}
