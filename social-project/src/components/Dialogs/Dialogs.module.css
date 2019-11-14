@@ -8,18 +8,6 @@
     padding: 10px;
 }
 
-.dialog {
-
-}
-
-.dialog.active {
-    color: gold;
-}
-
-.messagesItems {
+.messages {
     padding: 10px;
-}
-
-.meesage {
-
 }

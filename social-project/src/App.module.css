@@ -22,10 +22,11 @@ body {
 .content {
   grid-area: c;
   border: 3px solid #39603C;
-  margin-top: 5px;
   display: flex;
   flex-direction: column;
   align-items: left;
+  margin-top: 5px;
+  padding: 10px;
 }
 
 .wrapper {

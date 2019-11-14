@@ -1,0 +1,8 @@
+.dialog a{
+    color: #39603C;
+    text-decoration: none;
+}
+
+.dialog a.activeLink {
+    color: #930406 !important; 
+}
