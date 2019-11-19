@@ -1,0 +1,11 @@
+.message-my {
+    align-self: flex-end;
+    border: 1px solid #39603C;
+    border-radius: 10px 10px 0 10px;
+}
+
+.message-his {
+    align-self: flex-start;
+    border: 1px solid #39603C;
+    border-radius: 10px 10px 10px 0;
+}

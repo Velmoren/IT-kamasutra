@@ -1,3 +1,10 @@
+.dialog {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+
+}
+
 .dialog a{
     color: #39603C;
     text-decoration: none;
@@ -5,4 +12,9 @@
 
 .dialog a.activeLink {
     color: #930406 !important; 
+}
+
+.avatar {
+    width: 30px;
+    margin-right: 10px;
 }

@@ -8,9 +8,9 @@ const { dialogs, dialogsItems, messages } = classes;
 
 const Dialogs = (props) => {
 
-    let dialogsElements = props.dialogs.map(dialog => <DialogItem name={dialog.name} id={dialog.id} key={dialog.id} />);
+    let dialogsElements = props.state.dialogs.map(dialog => <DialogItem state={dialog} key={dialog.id} />);
 
-    let messageElements = props.messages.map(message => <Message message={message.message} id={message.id} key={message.id} />);
+    let messageElements = props.state.messages.map(message => <Message state={message} key={message.id} />);
 
     return (
         <div className={dialogs}>

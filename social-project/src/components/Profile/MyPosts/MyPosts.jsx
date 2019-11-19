@@ -7,7 +7,7 @@ const { postsBlock, addPost, posts } = classes;
 
 const MyPosts = (props) => {
 
-    let postsElements = props.posts.map(post => <MyPost message={post.message} countLikes={post.countLikes} key={post.id} />)
+    let postsElements = props.state.posts.map(post => <MyPost message={post.message} countLikes={post.countLikes} key={post.id} />)
 
     return (
         <h3 className={postsBlock}>
