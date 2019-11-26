@@ -5,11 +5,10 @@ import avatarImg from './settings.svg'
 
 // styles
 import classes from './MyPost.module.css';
-const { item } = classes;
 
 const MyPost = (props) => {
     return (
-        <div className={item}>
+        <div className={classes.item}>
             <img src={avatarImg} alt="avatarImg" />
             <span>{props.message}</span>
             <div>

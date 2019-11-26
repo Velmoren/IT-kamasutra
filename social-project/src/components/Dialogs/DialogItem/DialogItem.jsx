@@ -7,7 +7,6 @@ const { dialog, activeLink, avatar } = classes;
 
 const DialogItem = (props) => {
     let path = '/dialogs/' + props.state.id;
-    console.log(props.state);
 
     return (
         <div className={dialog}>

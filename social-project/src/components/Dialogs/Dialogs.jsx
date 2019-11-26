@@ -4,13 +4,22 @@ import Message from './Message/Message';
 
 // styles
 import classes from './Dialogs.module.css';
-const { dialogs, dialogsItems, messages } = classes;
+const { dialogs, dialogsItems, messages, button } = classes;
 
 const Dialogs = (props) => {
 
-    let dialogsElements = props.state.dialogs.map(dialog => <DialogItem state={dialog} key={dialog.id} />);
+    // ссылки на элемент
+    let newMessageElement = React.createRef();
 
-    let messageElements = props.state.messages.map(message => <Message state={message} key={message.id} />);
+    // акшены
+    const actionAddMessage = () => {
+        let text = newMessageElement.current.value;
+        alert(text)
+    }
+
+    // перебор и вывод данных
+    let dialogsElements = props.state.messagesPage.dialogs.map(dialog => <DialogItem state={dialog} key={dialog.id} />);
+    let messageElements = props.state.messagesPage.messages.map(message => <Message state={message} key={message.id} />);
 
     return (
         <div className={dialogs}>
@@ -19,6 +28,8 @@ const Dialogs = (props) => {
             </div>
             <div className={messages}>
                 {messageElements}
+                <textarea ref={newMessageElement} ></textarea>
+                <button onClick={actionAddMessage} className={button}>send</button>
             </div>
         </div>
     )
