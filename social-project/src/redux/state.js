@@ -2,6 +2,10 @@ import avatar1 from '../media/img/smile-1.png';
 import avatar2 from '../media/img/smile-2.png';
 import avatar3 from '../media/img/smile-3.png';
 
+import profileReducer from '../redux/profileReducer';
+import messagesReducer from '../redux/messagesReducer';
+import sidebarReducer from '../redux/sidebarReducer';
+
 let store = {
     _state: {
         profilePage: {
@@ -26,8 +30,10 @@ let store = {
                 { id: 3, message: 'Yo, How is yuor it-camasutra', sender: 'message-my' },
                 { id: 4, message: 'Yo', sender: 'message-his' },
                 { id: 5, message: 'Yo', sender: 'message-my' }
-            ]
-        }
+            ],
+            newMessageText: ''
+        },
+        sidebar: {}
     },
     _callSubscriber() {
         console.log('state changed');
@@ -35,23 +41,15 @@ let store = {
     getState() {
         return this._state;
     },
-    actionAddPost() {
-        let newPost = {
-            id: 5,
-            message: this._state.profilePage.newPostText,
-            countLikes: 0
-        };
-
-        this._state.profilePage.posts.push(newPost);
-        this._state.profilePage.newPostText = '';
-        this._callSubscriber(this._state);
-    },
-    updateNewPostText(newText) {
-        this._state.profilePage.newPostText = newText;
-        this._callSubscriber(this._state);
-    },
     subscribe(observer) {
         this._callSubscriber = observer;
+    },
+    dispatch(action) {
+        this._state.profilePage = profileReducer(this._state.profilePage, action);
+        this._state.messagesPage = messagesReducer(this._state.messagesPage, action);
+        this._state.sidebar = sidebarReducer(this._state.sidebar, action);
+
+        this._callSubscriber(this._state);
     }
 }
 

@@ -11,11 +11,7 @@ import './index.css';
 
 let rerenderEntireTree = (state) => {
     ReactDOM.render(
-        <App
-            state={state}
-            actionAddPost={store.actionAddPost.bind(store)}
-            updateNewPostText={store.updateNewPostText.bind(store)}
-        />, document.getElementById('root')
+        <App state={state} dispatch={store.dispatch.bind(store)} />, document.getElementById('root')
     );
 }
 
