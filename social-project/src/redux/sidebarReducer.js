@@ -1,4 +1,9 @@
-const sidebarReducer = (state, action) => {
+let initialState = {
+
+}
+
+
+const sidebarReducer = (state = initialState, action) => {
     switch (action.type) {
         case '':
 

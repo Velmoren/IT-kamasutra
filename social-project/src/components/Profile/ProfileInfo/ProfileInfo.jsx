@@ -7,7 +7,7 @@ import contentLogo from './coffee-cup.svg';
 import classes from './ProfileInfo.module.css';
 const { logo, descriptionBlock } = classes;
 
-const ProfileInfo = (props) => {
+const ProfileInfo = () => {
     return (
         <>
             <div className={logo}>

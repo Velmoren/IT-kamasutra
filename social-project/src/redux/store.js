@@ -2,9 +2,9 @@ import avatar1 from '../media/img/smile-1.png';
 import avatar2 from '../media/img/smile-2.png';
 import avatar3 from '../media/img/smile-3.png';
 
-import profileReducer from '../redux/profileReducer';
-import messagesReducer from '../redux/messagesReducer';
-import sidebarReducer from '../redux/sidebarReducer';
+import profileReducer from './profileReducer';
+import messagesReducer from './messagesReducer';
+import sidebarReducer from './sidebarReducer';
 
 let store = {
     _state: {
