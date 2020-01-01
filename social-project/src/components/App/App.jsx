@@ -14,7 +14,7 @@ import Settings from '../Settings/Settings';
 import classes from './App.module.css';
 const { appWrapper, content, wrapper } = classes;
 
-const App = (props) => {
+const App = () => {
 
     return (
         <div className={appWrapper}>

@@ -17,8 +17,8 @@ const Dialogs = (props) => {
         props.updateNewMessageText(text)
     }
 
-    let dialogsElements = props.dialogs.map((dialog, index) => <DialogItem state={dialog} key={index} />);
-    let messageElements = props.messages.map((message, index) => <Message state={message} key={index} />);
+    let dialogsElements = props.messagesPage.dialogs.map((dialog, index) => <DialogItem state={dialog} key={index} />);
+    let messageElements = props.messagesPage.messages.map((message, index) => <Message state={message} key={index} />);
 
     return (
         <div className={dialogs}>
@@ -27,7 +27,7 @@ const Dialogs = (props) => {
             </div>
             <div className={messages}>
                 {messageElements}
-                <textarea onChange={onChangeMessage} value={props.newMessageText}></textarea>
+                <textarea onChange={onChangeMessage} value={props.messagesPage.newMessageText}></textarea>
                 <button onClick={onAddMessage} className={button}>send</button>
             </div>
         </div>
