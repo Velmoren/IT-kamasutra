@@ -19,3 +19,6 @@ let mapDispatchToProps = (dispatch) => {
 const DialogsContainer = connect(mapStateToProps, mapDispatchToProps)(Dialogs)
 
 export default DialogsContainer;
+
+// упрощенный вариант записи, реализован в UsersContainer
+// export default connect(mapStateToProps, mapDispatchToProps)(Dialogs)
