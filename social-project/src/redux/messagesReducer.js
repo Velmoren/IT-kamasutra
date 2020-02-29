@@ -1,6 +1,6 @@
-import avatar1 from '../media/img/smile-1.png';
-import avatar2 from '../media/img/smile-2.png';
-import avatar3 from '../media/img/smile-3.png';
+import avatar1 from '../assets/images/smile-1.png';
+import avatar2 from '../assets/images/smile-2.png';
+import avatar3 from '../assets/images/smile-3.png';
 
 const SEND_MESSAGE = 'SEND-MESSAGE';
 const UPDATE_NEW_MESSAGE_TEXT = 'UPDATE-NEW-MESSAGE-TEXT';
