@@ -25,3 +25,13 @@
   .title span {
     padding-left: 60px;
   }
+
+  .login_block {
+    margin-right: 20px;
+  }
+
+  .login_block a, span {
+    text-decoration: none;
+    color: #39603C;
+    line-height: 40px;
+  }

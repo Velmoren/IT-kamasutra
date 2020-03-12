@@ -5,6 +5,7 @@ import userAvatar from '../../assets/images/user.png'
 
 // styles
 import S from './Users.module.css';
+import { NavLink } from 'react-router-dom';
 const { userPhoto, selectedPage } = S;
 
 const Users = (props) => {
@@ -19,6 +20,7 @@ const Users = (props) => {
   for (let i = 1; i <= pagesCount; i++) {
     pages.push(i)
   }
+
   return (
     <div>
       <div>
@@ -36,7 +38,9 @@ const Users = (props) => {
         <div key={user.id}>
           <span>
             <div>
-              <img className={userPhoto} src={user.photos.small != null ? user.photos.small : userAvatar} alt={user.name} />
+              <NavLink to={'/profile/' + user.id}>
+                <img className={userPhoto} src={user.photos.small != null ? user.photos.small : userAvatar} alt={user.name} />
+              </NavLink>
             </div>
             <div>
               {user.followed ?

@@ -3,7 +3,7 @@ import React from 'react';
 // styles
 // import classes from './Settings.module.css';
 
-const Settings = (props) => {
+const SettingsPage = (props) => {
     return (
         <div>
             Settings
@@ -11,4 +11,4 @@ const Settings = (props) => {
     )
 }
 
-export default Settings;
+export default SettingsPage;
